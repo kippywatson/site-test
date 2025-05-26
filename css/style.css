@@ -1,100 +1,134 @@
 :root {
-    --lavanda-escuro: #6C5B7B;
-    --lavanda: #9B59B6;
-    --lavanda-claro: #C39BD3;
-    --fundo: #F5EEF8;
-    --texto: #4A235A;
+    --lavanda-claro: #E6E6FA;
+    --lavanda: #B39DDB;
+    --lavanda-escuro: #9575CD;
+    --destaque: #FFB74D; /* Cor vibrante para botões e destaques */
+    --texto: #4A4A4A;
+    --fundo: #FAF5FF;
 }
 
+/* Reset e Estilos Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     background-color: var(--fundo);
     color: var(--texto);
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
+/* Header Moderno */
 header {
-    background: linear-gradient(135deg, var(--lavanda-escuro), var(--lavanda));
-    color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(183, 148, 244, 0.1);
+    padding: 1rem 5%;
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: white;
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--lavanda-escuro);
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--lavanda-claro);
+.nav-links li a {
+    color: var(--texto);
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
 }
 
+.nav-links li a:hover {
+    background: var(--lavanda-claro);
+    color: var(--lavanda-escuro);
+}
+
+/* Hero Section com Gradiente */
 .hero {
-    background: linear-gradient(rgba(108, 91, 123, 0.8), rgba(155, 89, 182, 0.8)), 
-                url('../img/banner.jpg') center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, var(--lavanda-claro), var(--fundo));
+    padding: 150px 5% 100px;
     text-align: center;
-    padding-top: 80px;
 }
 
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--lavanda-escuro);
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cards de Serviços Modernos */
 .servicos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 4rem 2rem;
+    padding: 4rem 5%;
 }
 
 .servico-item {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(179, 157, 219, 0.1);
     transition: transform 0.3s;
+    text-align: center;
 }
 
 .servico-item:hover {
     transform: translateY(-10px);
 }
 
+/* Botão com Efeito Moderno */
 .btn {
-    background: var(--lavanda);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
+    background: var(--lavanda-escuro);
+    color: white !important;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
     display: inline-block;
-    margin-top: 1rem;
-    transition: background 0.3s;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 .btn:hover {
-    background: var(--lavanda-escuro);
+    background: var(--destaque);
+    box-shadow: 0 5px 15px rgba(255, 183, 77, 0.3);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .burger {
-        display: block;
-    }
+/* Seção "Sobre Mim" */
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 5rem 5%;
+    background: white;
+}
+
+.sobre-img img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(179, 157, 219, 0.2);
+}
+
+/* Footer */
+footer {
+    background: var(--lavanda-escuro);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem;
 }

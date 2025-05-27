@@ -30,26 +30,42 @@
         </nav>
     </header>
 
-    <section class="contato">
-        <div class="contato-container">
-            <form class="contato-form">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Mensagem" rows="5" required></textarea>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-            <div class="contato-info">
-                <h3>Contato Direto</h3>
-                <p><i class="fas fa-phone"></i> (11) 99950-9978</p>
-                <p><i class="fas fa-envelope"></i> psi.luisapelachin@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Rua Arthur de Azevedo, 1681</p>
-            </div>
-        </div>
-    </section>
+<section class="contato">
+    <div class="contato-container">
+        <form action="https://formsubmit.co/SEUEMAIL@gmail.com" method="POST" class="contato-form">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
 
-    <footer>
-        <p>© 2025 Psicóloga Luísa Pelachin. CRP: 06/20038 </p>
-    </footer>
+            <!-- Anti-spam -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Redirecionamento após envio -->
+            <input type="hidden" name="_next" value="https://SEU_SITE.github.io/obrigado.html">
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <div class="contato-info">
+            <h3>Contato Direto</h3>
+            <p><i class="fas fa-phone"></i> (11) 99950-9978</p>
+            <p><i class="fas fa-envelope"></i> psi.luisapelachin@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Rua Arthur de Azevedo, 1681</p>
+        </div>
+    </div>
+</section>
+
+
+
+   <footer>
+    <p>© 2025 Psicóloga Luísa Pelachin. CRP: 06/20038</p>
+    <div class="redes-sociais">
+        <a href="https://www.instagram.com/seuperfil" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/seuperfil" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/5511999509978" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
 
 </body>
 </html>

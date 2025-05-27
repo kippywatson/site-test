@@ -18,7 +18,7 @@
 body {
     background-color: var(--fundo);
     color: var(--texto);
-    line-height: 1.0;
+    line-height: 1.5;
     padding-top: 0px /* Ex.: 80px ou o valor que resolver */
 
 }
@@ -26,7 +26,7 @@ body {
 
 /* Header Moderno */
 header {
-    background: var(--lavanda-escuro)
+    background: var(--lavanda-escuro);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(183, 148, 244, 0.1);
     padding: 1rem 5%;
@@ -264,16 +264,6 @@ footer {
     background-color: #f9f9f9;
 }
 
-.contato-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
-}
-
 .contato-form {
     flex: 1;
     min-width: 300px;
@@ -330,16 +320,6 @@ footer {
     min-width: 280px;
     max-width: 400px;
     background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.formulario-google {
-    flex: 2;
-    min-width: 300px;
-    max-width: 700px;
-    background-color: #fff;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
